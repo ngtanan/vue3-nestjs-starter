@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "arjun.swagger-viewer",
+    "eamodio.gitlens",
+    "vue.volar",
+    "Vue.vscode-typescript-vue-plugin",
+    "stylelint.vscode-stylelint",
+    "bradlc.vscode-tailwindcss",
+    "cpylua.language-postcss",
+    "usernamehw.errorlens"
+  ]
+}
