@@ -16,9 +16,8 @@ export default defineConfig({
         NaiveUiResolver(),
         (componentName) => {
           // where `componentName` is always CapitalCase
-          if (componentName === 'Icon')
-            return { name: 'Icon', from: '@iconify/vue' }
-        },
+          if (componentName === 'Icon') { return { name: 'Icon', from: '@iconify/vue' } }
+        }
       ]
     })
   ],
