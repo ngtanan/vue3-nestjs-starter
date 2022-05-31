@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from '@/components/HelloWorld.vue'
+import { logger } from '@awesome-boilerplate/shared'
+logger('Hello from App.vue')
 </script>
 
 <template>

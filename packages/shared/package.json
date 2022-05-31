@@ -1,0 +1,23 @@
+{
+  "name": "@awesome-boilerplate/shared",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "An Nguyễn <ntanan1996@gmail.com>",
+  "homepage": "https://github.com/nguyentanan/awesome-vue3-nestjs#readme",
+  "license": "ISC",
+  "main": "index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nguyentanan/awesome-vue3-nestjs.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "tsc": "tsc"
+  },
+  "bugs": {
+    "url": "https://github.com/nguyentanan/awesome-vue3-nestjs/issues"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.2"
+  }
+}
