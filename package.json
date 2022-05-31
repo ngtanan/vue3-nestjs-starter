@@ -8,7 +8,7 @@
     "packages/*"
   ],
   "scripts": {
-    "initialize": "npm install && npm run clean && lerna bootstrap",
+    "initialize": "yarn install && yarn clean && lerna bootstrap",
     "clean": "lerna clean --yes && lerna exec -- rimraf dist",
     "refresh": "lerna bootstrap",
     "build": "lerna run build --stream",
@@ -30,8 +30,7 @@
     "husky": "^8.0.1",
     "lerna": "^4.0.0",
     "lint-staged": "^12.4.1",
-    "rimraf": "^3.0.2",
-    "typescript": "^4.6.4"
+    "rimraf": "^3.0.2"
   },
   "config": {
     "commitizen": {
