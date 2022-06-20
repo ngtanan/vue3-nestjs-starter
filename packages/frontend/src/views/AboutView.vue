@@ -4,12 +4,13 @@
   </div>
 </template>
 
-<style>
+<style lang="postcss" scoped>
 @media (min-width: 1024px) {
   .about {
+    @apply flex items-center;
     min-height: 100vh;
-    display: flex;
-    align-items: center;
+    color: var(--vt-c-white-mute);
+    margin: theme('spacing.6');
   }
 }
 </style>

@@ -35,7 +35,7 @@ logger('Hello from App.vue')
   <RouterView />
 </template>
 
-<style>
+<style lang="postcss">
 @import "@/assets/base.css";
 
 #app {
@@ -43,16 +43,17 @@ logger('Hello from App.vue')
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
+  padding: theme('spacing.4') theme('spacing.2');
+  /* background-color: var(--vt-c-white); */
+  .logo {
+    display: block;
+    margin: 0 auto 2rem;
+  }
 }
 
 header {
   line-height: 1.5;
   max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
 }
 
 a,
@@ -103,6 +104,9 @@ nav a:first-of-type {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
+    .logo {
+      margin: 0 2rem 0 0;
+    }
   }
 
   header {
@@ -115,10 +119,6 @@ nav a:first-of-type {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
   }
 
   nav {

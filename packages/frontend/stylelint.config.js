@@ -19,8 +19,6 @@ module.exports = {
         'mixin'
       ]
     }]
-    // 'declaration-block-trailing-semicolon': null,
-    // 'no-descending-specificity': null
   },
   ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts']
 }
