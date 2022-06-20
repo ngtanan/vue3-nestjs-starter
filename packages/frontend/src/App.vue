@@ -41,9 +41,9 @@ logger('Hello from App.vue')
 #app {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   font-weight: normal;
-  padding: theme('spacing.4') theme('spacing.2');
+  padding: theme("spacing.4") theme("spacing.2");
+
   /* background-color: var(--vt-c-white); */
   .logo {
     display: block;
@@ -104,6 +104,7 @@ nav a:first-of-type {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
+
     .logo {
       margin: 0 2rem 0 0;
     }

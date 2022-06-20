@@ -8,9 +8,10 @@
 @media (min-width: 1024px) {
   .about {
     @apply flex items-center;
+
     min-height: 100vh;
     color: var(--vt-c-white-mute);
-    margin: theme('spacing.6');
+    margin: theme("spacing.6");
   }
 }
 </style>
