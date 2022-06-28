@@ -1,0 +1,23 @@
+name: PR labeler based on multiple rules
+# This workflow is triggered every time a PR is changed(opened/closed or code modifed).
+on:
+  pull_request
+
+jobs:
+  size-label:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add Size Label to PR
+        uses: WizardOhio24/label-pr-size-action@v1.0.1
+        with:
+          GITHUB_TOKEN: ${{ github.token }} # ${{ secrets.GITHUB_TOKEN }}
+
+  multi-rules-label:
+    runs-on: ubuntu-latest
+    steps:
+      # https://github.com/marketplace/actions/pr-labeler-based-on-multiple-rules
+      - uses: srvaroa/labeler@v0.9
+        with:
+          config_path: .github/labeler_config.yml
+        env:
+          GITHUB_TOKEN: ${{ github.token }} # ${{ secrets.GITHUB_TOKEN }}
