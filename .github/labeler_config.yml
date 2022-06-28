@@ -1,0 +1,42 @@
+version: 1
+labels:
+  - label: "xsmall-diff"
+    size-below: 10
+  - label: "small-diff"
+    size-above: 9
+    size-below: 100
+  - label: "medium-diff"
+    size-above: 99
+    size-below: 500
+  - label: "large-diff"
+    size-above: 499
+    size-below: 1000
+  - label: "xlarge-diff"
+    size-above: 999
+  - label: "frontend"
+    files:
+      - "packages/frontend/.*"
+  - label: "backend"
+    files:
+      - "packages/backend/.*"
+  - label: "ci"
+    files:
+      - ".github/.*"
+      - ".circleci/.*"
+  - label: "webserver-config"
+    files:
+      - "nginx/.*"
+      - "docker-compose.yml"
+  - label: "app-config"
+    files:
+      - "packages/backend/config/.*"
+      - "packages/frontend/nuxt.config.js"
+  - label: "env-config"
+    files:
+      - "packages/backend/.env*"
+      - "packages/frontend/.env*"
+      - "packages/.env*"
+  - label: "docker-config"
+    files:
+      - "*/**/Dockerfile*"
+      - "*/**/docker-compose*"
