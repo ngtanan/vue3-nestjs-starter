@@ -16,7 +16,7 @@ logger('Hello from App.vue')
     >
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <HelloWorld msg="You did it! - Hello github actions" />
 
       <nav>
         <RouterLink to="/" class="text-3xl font-bold underline">
