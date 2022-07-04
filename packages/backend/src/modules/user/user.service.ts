@@ -1,13 +1,14 @@
 import { Injectable } from '@nestjs/common'
-import { InsertResult } from 'typeorm'
+import { InsertResult, Repository } from 'typeorm'
 import * as bcrypt from 'bcrypt'
+
+import { InjectRepository } from '@nestjs/typeorm'
 import { User } from './user.entity'
-import { UserRepository } from './user.repository'
 import { CreateUserDto } from './dto/create-user.dto'
 
 @Injectable()
 export class UserService {
-  constructor(private userRepository: UserRepository) {}
+  constructor(@InjectRepository(User) private userRepository: Repository<User>) {}
 
   async findOne(email: string): Promise<User | undefined> {
     return this.userRepository.findOne({ email })
@@ -15,7 +16,6 @@ export class UserService {
 
   async findAll(): Promise<User[]> {
     const result = await this.userRepository.find()
-    console.log('result', result)
     return result
   }
 

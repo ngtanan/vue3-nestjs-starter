@@ -10,17 +10,18 @@ import { AppController } from './app.controller'
 // #region Import everything outside modules
 import { DatabaseModule } from './database/database.module'
 import { LoggerModule } from './loggers/logger.module'
-import { LoggerMiddleware } from './loggers/logger.middleware'
 import { SharedModule } from './shared/shared.module'
+
+import { LoggerMiddleware } from './loggers/logger.middleware'
 import { JwtAuthGuard } from './guards/jwt-auth.guard'
 import { AllExceptionFilter } from './exception-filters/all-exception.filter'
 // #endregion Import everything outside modules
 
-// #region Import module inside modules
+// #region Import everything inside modules
 import { AuthModule } from './modules/auth/auth.module'
 import { HealthModule } from './modules/health/health.module'
 import { UserModule } from './modules/user/user.module'
-// #endregion Import module inside modules
+// #endregion Import everything inside modules
 
 @Module({
   imports: [
@@ -53,7 +54,7 @@ import { UserModule } from './modules/user/user.module'
     LoggerModule,
     SharedModule,
 
-    // Module inside modules
+    // Inside modules
     AuthModule,
     HealthModule,
     UserModule

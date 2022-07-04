@@ -9,14 +9,14 @@ const dbConfig: TypeOrmModuleOptions & { seeds: string[]; factories: string[] } 
   password: process.env.POSTGRES_PASSWORD,
   database: process.env.POSTGRES_DB,
   cli: {
-    migrationsDir: 'src/database/migration'
+    migrationsDir: 'src/database/migrations'
   },
   ssl: process.env.NODE_ENV === 'PROD',
   entities: [`${__dirname}/../**/*.entity{.ts,.js}`],
   autoLoadEntities: true,
   synchronize: false, // NOTE: should be 'false' to avoid data loss, and to make the migrations work
   migrationsRun: process.env.RUN_MIGRATIONS === 'true', // automatically run migrations
-  migrations: [`${__dirname}/migration/*.{ts,js}`],
+  migrations: [`${__dirname}/migrations/*.{ts,js}`],
   seeds: [`${__dirname}/seeds/*.{ts,js}`],
   factories: [`${__dirname}/factories/*.{ts,js}`]
 }
